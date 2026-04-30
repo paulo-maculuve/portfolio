@@ -1,391 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt" data-theme="dark">
 <head>
-  <!--Useful meta tags-->
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="robots" content="index, follow, noodp" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="google" content="notranslate" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!--Preloader JS-->
-  <script type="text/javascript" src="assets/js/preloader.js"></script>
-  <!--Preloader Style-->
-  <link rel="stylesheet" href="assets/css/preload.css" />
-  <!--Bootstrap Stylesheet-->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Magnific Popup Stylesheet-->
-  <link rel="stylesheet" href="assets/css/magnific-popup.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--OWL Carousel Stylesheet-->
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Font Awesome Stylesheet-->
-  <link rel="stylesheet" href="assets/css/all.min.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Mobirise-->
-  <link rel="stylesheet" href="assets/css/mobirise/style.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--AOC-->
-  <link rel="stylesheet" href="assets/css/aos.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Main Stylesheet-->
-  <link rel="stylesheet" href="assets/css/mono.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Responsive Stylesheet-->
-  <link rel="stylesheet" href="assets/css/responsive.css" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Theme Stylesheet-->
-  <link rel="stylesheet" href="assets/css/dark.theme.css" id="optional-theme" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--Theme Color-->
-  <link rel="stylesheet" href="assets/css/default.css" id="optional-color" as="style"
-    onload="this.rel='stylesheet';this.removeAttribute('onload');" />
-  <!--MAIN TITLE-->
-  <title>Personal Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Paulo Maculuve — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Paulo Maculuve, Desenvolvedor Full Stack especializado em Java, PHP, JavaScript, Flutter, APIs REST, USSD e WhatsApp Business em Moçambique." />
+  <meta name="keywords" content="Paulo Maculuve, Desenvolvedor Web, Full Stack, Java, Spring Boot, PHP, Laravel, Flutter, Moçambique, API REST" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Paulo Maculuve" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Paulo Maculuve — Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Portfólio de Paulo Samuel Maculuve — desenvolvimento web, APIs REST, mobile e WhatsApp Business." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts: Syne + Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS — Animate on Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Portfolio stylesheet -->
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
 </head>
 
-<body data-spy="scroll" data-target=".scrollspy" data-offset="85">
-  <!--PRELOADER START-->
-  <div id="preloader">
-    <div class="text-center w-100">
-      <div class="loader"></div>
-    </div>
-  </div>
-  <!--PRELOADER END-->
-  <!--HEADER START-->
-  <header class="navigation horizontal_header transparentOnScroll navbar navbar-expand-lg fixed-top">
-    <div class="header-ins">
-      <div class="container">
-        <!--LOGO AREA-->
-        <div class="site-logo">
-          <a href="#" class="hoveroff" title="Paulo Maculuve">
-            P<span>M</span>
-          </a>
-        </div>
-        <button class="button-toggler navbar-toggler collapsed" type="button" data-target="#navigation"
-          data-toggle="collapse" aria-controls="navigation" aria-expanded="false">
+<body>
+
+  <!-- Custom cursor (hidden on mobile via CSS) -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       NAVBAR
+  ====================================================================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+      <a href="#home" class="nav-logo">PM<span>.</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projectos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-btn" id="themeBtn" aria-label="Alternar modo escuro/claro" title="Toggle dark mode">
+          <!-- icon set by JS -->
+        </button>
+        <a href="https://drive.google.com/file/d/17Zh4x3zQ4mUmR4VIkl6X6Ey_medQPou7/view?usp=sharing"
+           class="btn btn-accent"
+           target="_blank" rel="noopener">
+          Download CV
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <!--Main Navigation START-->
-        <ul class="justify-content-end scrollspy collapse navbar-collapse" id="navigation">
-          <li>
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="nav-link">Sobre</a>
-          </li>
-          <li hidden>
-            <a href="#service" class="nav-link">Seriço</a>
-          </li>
-          <li>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-          </li>
-          <li>
-            <a href="#resume" class="nav-link">Currículo</a>
-          </li>
-          <li>
-            <a href="#contact" class="nav-link">Contacto</a>
-          </li>
-        </ul>
-        <!--Main Navigation END-->
       </div>
     </div>
-  </header>
-  <!--HEADER END-->
+  </nav>
 
-  <main class="content center-main">
-    <!--INTRODUCTION SECTION START-->
-    <section class="home d-flex" id="home">
-      <!--Start Background Image-->
-      <div class="mono-background">
-        <div class="mono-background-inner" data-aos-duration="1200" data-aos-delay="450" data-aos="fade-left">
-          <img src="assets/images/person.png" class="img-align-center" alt="" />
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu móvel">
+    <a href="#about">Sobre</a>
+    <a href="#projects">Projectos</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contacto</a>
+    <a href="https://drive.google.com/file/d/17Zh4x3zQ4mUmR4VIkl6X6Ey_medQPou7/view?usp=sharing"
+       target="_blank" rel="noopener" style="color:var(--accent)">Download CV</a>
+  </div>
+
+  <main>
+
+    <!-- ===================================================================
+         HERO
+    ==================================================================== -->
+    <section class="hero" id="home" aria-label="Introdução">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+
+        <div class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          Disponível para novos projectos
         </div>
-      </div>
-      <!--End Background Image-->
 
-      <div class="container introduction text-left">
-        <p class="welcome_text mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
-          Sou
-          <span class="welcome-text-type" data-options="Desenvolvedor Web, Desenvolvedor de Software"></span>
+        <h1 class="hero-title">
+          <span class="hero-name">Paulo Maculuve</span>
+          <span class="hero-sub">
+            — <em id="typed" aria-live="polite"></em><span class="typed-cursor" aria-hidden="true">|</span>
+          </span>
+        </h1>
+
+        <p class="hero-desc">
+          Desenvolvedor Full Stack com experiência em Java, PHP, JavaScript e Flutter.
+          Especializado em APIs REST, USSD, WhatsApp Business e sistemas web de alto desempenho
+          para empresas moçambicanas e internacionais.
         </p>
-        <div id="parallax-scene" class="mb-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
-          <div class="heading-zone">
-            <h1>Paulo Maculuve</h1>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-accent">Ver Projectos</a>
+          <a href="#contact" class="btn btn-outline">Entrar em contacto</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Estatísticas">
+          <div class="stat-item">
+            <div class="stat-val">
+              <span data-to="3" aria-label="anos de experiência">0</span><sup>+</sup>
+            </div>
+            <div class="stat-lbl">Anos de exp.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">
+              <span data-to="25" aria-label="projectos concluídos">0</span><sup>+</sup>
+            </div>
+            <div class="stat-lbl">Projectos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">
+              <span data-to="4" aria-label="dependências publicadas">0</span>
+            </div>
+            <div class="stat-lbl">Dependências</div>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="450">
-          <a href="#about" class="btn btn-primary btn-small">Saiba Mais</a>
-        </div>
-      </div>
-      <div class="scroll-down" hidden>
-        <a href="#about" class="scroll-down-link text-center hoveroff">
-          <div class="scroll-title">Deslocar para baixo</div>
-          <div class="scroll-mouse">
-            <div class="whell"></div>
-          </div>
-        </a>
+
       </div>
     </section>
-    <!--INTRODUCTION SECTION END-->
 
-    <!--ABOUT SECTION START-->
-    <section class="about" id="about">
-      <div class="container d-flex justify-content-between flex-column h-100">
-        <div class="section-title flex-grow-1">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center">
-                <h2 data-aos="heading-show" class="text_background">
-                  Quem sou eu
-                  <span class="heading_background">Sobre mim</span>
-                </h2>
-                <p class="m-0">Vem conhecer-me</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-content flex-grow-1">
-          <div class="row align-items-center">
-            <div class="col-md-8 mt-5 mt-md-0">
-              <h3 class="m-0">Eu sou Paulo Maculuve</h3>
-              <p class="my-4">
-                Olá! Eu sou um desenvolvedor experiente com a formação
-                académica em Administração de Sistemas de Informação e Redes,
-                especializado em desenvolvimento Web e Software. Possuo
-                habilidades avançadas em Java, PHP, JavaScript, e Shell
-                Script, com foco em integração de APIs, desenvolvimento de
-                aplicações Mobiles e Administração de sistemas Linux.
-                Demonstrado histórico de sucesso em projetos de
-                desenvolvimento de websites, Aplicações USSD, APIs REST, e
-                plataformas de Business WhatsApp, com forte capacidade de
-                trabalho em equipe e comprometimento com resultados.
-              </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="about-info mb-2">
-                    <span class="desc">Nome Completo:</span>
-                    <span>Paulo Samuel Maculuve</span>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="about-info mb-2">
-                    <span class="desc">Idade:</span>
-                    <span>
-                      <script>
-                        document.write(new Date().getFullYear() - 2002);
-                      </script>
-                      Anos de Idade
-                    </span>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="about-info mb-2">
-                    <span class="desc">Experiência:</span>
-                    <span>
-                      <script>
-                        document.write(new Date().getFullYear() - 2023);
-                      </script>
-                      Anos
-                    </span>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="about-info mb-2">
-                    <span class="desc">Email:</span>
-                    <span><a href="mailto:paulomaculuve758@gmail.com"
-                        class="__cf_email__">paulomaculuve758@gmail.com</a></span>
-                  </div>
-                </div>
-              </div>
-              <div class="button_and_social my-4">
-                <div class="row justify-content-center align-items-center">
-                  <div class="col-xl-6">
-                    <a href="https://drive.google.com/file/d/17Zh4x3zQ4mUmR4VIkl6X6Ey_medQPou7/view?usp=sharing"
-                      class="btn btn-outline-primary btn-lg">Download
-                      CV</a>
-                  </div>
-                  <div class="col-xl-6">
-                    <ul class="social-icons list-inline mt-4 mt-xl-0">
-                      <li class="list-inline-item">
-                        <a href="https://wa.me/258846568447">
-                          <i class="fab fa-whatsapp"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="https://join.skype.com/invite/LHXMxWlgRAxi">
-                          <i class="fab fa-skype"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="https://linkedin.com/in/paulomaculuve">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="https://github.com/paulo-maculuve">
-                          <i class="fab fa-git"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--ABOUT SECTION END-->
-
-    <!--FACTS SECTION START-->
-    <div class="section facts backgound-section" style="background-image: url(assets/images/background_2.jpg)"
-      data-aos-id="facts">
+    <!-- ===================================================================
+         ABOUT
+    ==================================================================== -->
+    <section class="about" id="about" aria-label="Sobre mim">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 mt-3 mt-lg-0">
-            <div class="fact-single text-center">
-              <div class="fact-icon">
-                <span class="mbri-timer"></span>
-              </div>
-              <div class="fact-info">
-                <span class="tmcounter" data-from="0" id="experience" data-to="" data-speed="1500">
-                  <script>
-                    document.write(new Date().getFullYear() - 2023);
-                  </script>
-                </span>+
-              </div>
-              <div class="fact-meta">
-                <span>Anos de Esperiência</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 mt-3 mt-lg-0">
-            <div class="fact-single text-center">
-              <div class="fact-icon">
-                <span class="mbri-smile-face"></span>
-              </div>
-              <div class="fact-info">
-                <span class="tmcounter" data-from="0" data-to="25" data-speed="1500">25</span>+
-              </div>
-              <div class="fact-meta">
-                <span>Projectos Feitos</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 mt-3 mt-lg-0">
-            <div class="fact-single text-center">
-              <div class="fact-icon">
-                <span class="mbri-magic-stick"></span>
-              </div>
-              <div class="fact-info">
-                <span class="tmcounter" data-from="0" data-to="4" data-speed="1500">4</span>
-              </div>
-              <div class="fact-meta">
-                <span>Depedência Feitas</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--FACTS SECTION END-->
 
-    <!--SERVICES SECTION START-->
-    <section class="services" id="service" hidden>
-      <div class="container d-flex flex-column justify-content-between h-100">
-        <div class="section-title flex-grow-1">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center">
-                <h2 data-aos="heading-show" class="text_background">
-                  O que faço
-                  <span class="heading_background">Serviços</span>
-                </h2>
-                <p class="m-0">
-                  It is a long established fact that a reader will be
-                  distracted by the readable content
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="s-header" data-aos="fade-up">
+          <span class="s-num">01</span>
+          <h2 class="s-title">Sobre mim</h2>
         </div>
 
-        <div class="section-content flex-grow-1">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mt-4 mb-2">
-              <div class="service-single text-left p-5">
-                <div class="service-icon">
-                  <span class="mbri-database"></span>
-                </div>
-                <h3 class="my-3">Development</h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
+        <div class="about-grid">
+
+          <div data-aos="fade-right" data-aos-delay="100">
+            <div class="about-img-wrap">
+              <img src="assets/images/person.png" alt="Paulo Maculuve" loading="lazy" />
+            </div>
+          </div>
+
+          <div data-aos="fade-left" data-aos-delay="150">
+            <p class="about-eyebrow">Olá, prazer em conhecer-te</p>
+            <h3 class="about-heading">Sou Paulo Maculuve,<br>Desenvolvedor Full Stack.</h3>
+            <p class="about-bio">
+              Desenvolvedor experiente com formação académica em Administração de Sistemas de Informação
+              e Redes. Especializado em desenvolvimento Web e Software, com habilidades avançadas em
+              Java, PHP, JavaScript e Shell Script. Tenho foco em integração de APIs, desenvolvimento
+              de aplicações móveis e administração de sistemas Linux. Histórico comprovado em websites,
+              APIs RESTful, USSD, WhatsApp Business e painéis administrativos.
+            </p>
+
+            <div class="about-meta">
+              <div class="meta-item">
+                <span class="meta-label">Nome Completo</span>
+                <span class="meta-val">Paulo Samuel Maculuve</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Idade</span>
+                <span class="meta-val" id="ageText">—</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Experiência</span>
+                <span class="meta-val" id="expText">—</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Email</span>
+                <span class="meta-val">
+                  <a href="mailto:paulomaculuve758@gmail.com">paulomaculuve758@gmail.com</a>
+                </span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Localização</span>
+                <span class="meta-val">Matola, Moçambique</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Disponibilidade</span>
+                <span class="meta-val" style="color:var(--accent)">● Disponível</span>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-4 mb-2">
-              <div class="service-single text-left p-5">
-                <div class="service-icon">
-                  <span class="mbri-tablet"></span>
-                </div>
-                <h3 class="my-3">Responsive</h3>
-                <p>
-                  It is a long established fact that a reader will be
-                  distracted by the readable content
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 mb-2">
-              <div class="service-single text-left p-5">
-                <div class="service-icon">
-                  <span class="mbri-hot-cup"></span>
-                </div>
-                <h3 class="my-3">UI/UX Design</h3>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 mb-2">
-              <div class="service-single text-left p-5">
-                <div class="service-icon">
-                  <span class="mbri-layers"></span>
-                </div>
-                <h3 class="my-3">User Friendly</h3>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 mb-2">
-              <div class="service-single text-left p-5">
-                <div class="service-icon">
-                  <span class="mbri-hearth"></span>
-                </div>
-                <h3 class="my-3">Lovely</h3>
-                <p>
-                  It is a long established fact that a reader will be
-                  distracted
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 mb-2">
-              <div class="service-single text-left p-5">
-                <div class="service-icon">
-                  <span class="mbri-rocket"></span>
-                </div>
-                <h3 class="my-3">Bootstrap 4</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur</p>
+
+            <div class="about-foot">
+              <a href="https://drive.google.com/file/d/17Zh4x3zQ4mUmR4VIkl6X6Ey_medQPou7/view?usp=sharing"
+                 class="btn btn-accent"
+                 target="_blank" rel="noopener">
+                Download CV
+              </a>
+              <div class="socials" aria-label="Redes sociais">
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/258846568447" class="social-a" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                  </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/paulomaculuve" class="social-a" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/paulo-maculuve" class="social-a" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+
+                <!-- Skype -->
+                <a href="https://join.skype.com/invite/LHXMxWlgRAxi" class="social-a" target="_blank" rel="noopener" aria-label="Skype" title="Skype">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22.52 14.83a10 10 0 0 1-13.35 4.69 5.93 5.93 0 0 1-7.69-7.69A10 10 0 0 1 6.17 1.48a5.93 5.93 0 0 1 7.69 7.69 10 10 0 0 1 8.66 5.66z"/>
+                    <path d="M12 9c-1.5 0-2.5.8-2.5 1.9 0 2.6 5 1.6 5 4.2C14.5 16.4 13.5 17 12 17s-3-.8-3-2.1"/>
+                    <line x1="12" y1="7" x2="12" y2="9"/><line x1="12" y1="17" x2="12" y2="19"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -393,745 +239,553 @@
       </div>
     </section>
 
-    <!--SERVICE SECTION START-->
-
-    <!--PORTFOLIO SECTION START-->
-    <section class="portfolio" id="portfolio">
-      <div class="container d-flex flex-column justify-content-between h-100">
-        <div class="section-title flex-grow-1">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center">
-                <h2 data-aos="heading-show" class="text_background">
-                  Meus Projectos
-                  <span class="heading_background">Portfolio</span>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section-content flex-grow-1">
-          <div class="row portfolio-items">
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://bluteki.com" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio1.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Bluteki, LDA</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 backenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://perfection.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio2.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>PERFECTION Holdings</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 seo">
-              <div class="portfolio-item">
-                <a href="https://mmzauditores.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio3.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>MMZ Auditores</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 backenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://diamondseguros.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio4.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Diamond - Companhia de Seguros, S.A</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://indicoseguros.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio5.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Índico Seguros, S.A</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://eb.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio6.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Every Business</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://perfect.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio9.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Perfect - Panel beaters</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://genesis.co.mz" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio10.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Genesis, S.A</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="assets/images/portfolio7.jpeg" class="portfolio-single portfolio-image">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio7.jpeg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-mobile"></span>
-                        </div>
-                        <h3>EMOSE S.A</h3>
-                        <p>WhatsApp BOT</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="assets/images/portfolio8.jpeg" class="portfolio-single portfolio-image">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio8.jpeg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-mobile"></span>
-                        </div>
-                        <h3>Diamond - Companhia de Seguros, S.A</h3>
-                        <p>WhatsApp BOT</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://a2sgrafics.co.mz" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio11.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>A2S Grafics, LDA</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://caidozubaida.com" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio12.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Caido Zubaida</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://infopplysolutions.co.mz" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio13.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>InfoPply Solutions</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://jltech.co.mz/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio14.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>JL Tech</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://dolphincargoservice.com/" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio15.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Dolphin Cargo Service</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
-              <div class="portfolio-item">
-                <a href="https://bluteki.com" target="_blank" class="portfolio-single">
-                  <div class="item-box">
-                    <div class="item-image">
-                      <img src="assets/images/portfolio16.jpg" class="d-block img-fluid mx-auto" alt="" />
-                    </div>
-                    <div class="item-details d-flex align-items-center">
-                      <div class="item-details-ins text-center w-100">
-                        <div class="mb-2">
-                          <span class="mbri-link"></span>
-                        </div>
-                        <h3>Bluteki LDA, Novo Site</h3>
-                        <p>Website</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-
-          </div>
-
-          <div class="row" hidden>
-            <div class="col-12 text-center mt-5">
-              <a href="#" class="btn btn-outline-primary"><span><i class="fab fa-dribbble"></i></span> See
-                More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--PORTFOLIO SECTION START-->
-
-    <!--PROJECT Section START-->
-
-    <div class="section project backgound-section" style="background-image: url(assets/images/background_3.jpg)">
+    <!-- ===================================================================
+         PROJECTS
+    ==================================================================== -->
+    <section class="projects" id="projects" aria-label="Projectos">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="row box p-5 mx-3 mx-md-0 align-items-center text-center">
-              <div class="col-md-4 m-0 mb-3 mb-md-0">
-                <h3 class="m-0">Criar uma solição</h3>
-              </div>
-              <div class="col-md-4 m-0 mb-3 mb-md-0">
-                <p class="m-0">Podemos criar e desenvolver em conjunto.</p>
-              </div>
-              <div class="col-md-4">
-                <a href="#contact" class="btn btn-outline-primary">Vamos a isso</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!--PROJECT Section END-->
-
-    <!--RESUME SECTION START-->
-    <section class="resume" id="resume">
-      <div class="container d-flex flex-column justify-content-between h-100">
-        <div class="section-title flex-grow-1">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center">
-                <h2 data-aos="heading-show" class="text_background">
-                  A minha experiência
-                  <span class="heading_background">Currículo</span>
-                </h2>
-                <p class="m-0" hidden>
-                  If you are going to use a passage of Lorem Ipsum
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="s-header" data-aos="fade-up">
+          <span class="s-num">02</span>
+          <h2 class="s-title">Projectos</h2>
         </div>
 
-        <div class="section-content flex-grow-1">
-          <div class="row mt-4">
-            <div class="col-lg-6">
-              <h3 class="mb-4">Educação</h3>
-              <ul class="list-inline resume-list">
-                <li>
-                  <h4 class="mb-2">
-                    Universidade São Tomás de Moçambique, Administração de
-                    Sistemas de Inofrmação e Redes
-                  </h4>
-                  <span class="time">2020 - 2024</span>
-                  <p class="my-2">
-                    Gerenciar tecnologias da informação e infraestruturas, com
-                    foco em segurança, análise de dados e gestão de sistemas
-                    em ambientes corporativos.
-                  </p>
-                </li>
-              </ul>
-            </div>
+        <!-- First 9 projects -->
+        <div class="projects-grid">
 
-            <div class="col-lg-6">
-              <h3 class="mb-4">Experiência</h3>
-              <ul class="list-inline resume-list">
-                <li>
-                  <h4 class="mb-2">Full Stack Web Developer</h4>
-                  <a href="https://techsolutions.co.mz/">Techsolutions, LDA</a><br />
-                  <span class="time">Julho 2024 – Janeiro 2025</span>
-                  <p class="my-2">
-                    Desenvolvi um pacote de integração em PHP para pagamentos
-                    via M-Pesa, criei APIs seguras com Laravel para soluções
-                    de pagamento e implementei um sistema de recrutamento em
-                    Moçambique com Vue.js, proporcionando uma experiência de
-                    usuário otimizada.
-                  </p>
-                </li>
-                <li>
-                  <h4 class="mb-2">Desenvolvedor de Software</h4>
-                  <a href="https://bluteki.com">Bluteki, LDA</a><br />
-                  <span class="time">Dezembro 2022 – Presente</span>
-                  <p class="my-2">
-                    Desenvolvi websites personalizados com integração de APIs,
-                    garantindo alta performance, segurança e experiência de
-                    usuário superior, além de implementar soluções avançadas
-                    como pagamentos M-Pesa e e-Mola, aplicações USSD,
-                    plataformas de Business WhatsApp e painéis administrativos
-                    para controle e visualização de relatórios. Criei APIs
-                    RESTful escaláveis com Spring Boot e Laravel, desenvolvi
-                    aplicativos móveis com Flutter e gerenciei servidores
-                    Linux com automação via Shell Script, sempre focando em
-                    soluções eficientes, intuitivas e adaptadas às
-                    necessidades dos clientes.
-                  </p>
-                </li>
-                <li>
-                  <h4 class="mb-2">Freelancer</h4>
-                  <span class="time">Março 2022 – Presente</span>
-                  <p class="my-2">
-                    Desenvolvi websites personalizados e responsivos,
-                    adaptados às necessidades específicas dos clientes.
-                  </p>
-                </li>
-              </ul>
+          <a href="https://bluteki.com" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio1.jpg" alt="Bluteki, LDA" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
             </div>
-            <div class="col-lg-6">
-              <h3 class="mb-4">Certificações</h3>
-              <ul class="list-inline resume-list">
-                <li>
-                  <h4 class="mb-2">
-                    Certificado de Participação nas XVI Jornadas Científicas
-                    como Mentor
-                  </h4>
-                  <span class="time">Universidade São Tomás de Moçambique</span><br />
-                  <span class="time">Outubro 2023</span>
-                  <p class="my-2">
-                    Auxiliei na geração de ideias inovadoras, além de fornecer
-                    suporte técnico para superar dificuldades durante o
-                    desenvolvimento de soluções e projetos, contribuindo para
-                    o sucesso dos participantes.
-                  </p>
-                </li>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Bluteki, LDA</div>
+            </div>
+          </a>
 
-                <li>
-                  <h4 class="mb-2">Treinamento de Flutter e Dart</h4>
-                  <span class="time">Comunidade Flutter Moz</span><br />
-                  <span class="time">Dezembro 2023</span>
-                  <p class="my-2">
-                    Participei de um treinamento intensivo de Flutter, onde
-                    aprendi desde os conceitos básicos até a criação de uma
-                    aplicação completa. O curso abordou a utilização do
-                    Flutter e Dart para o desenvolvimento de aplicativos
-                    móveis.
-                  </p>
-                </li>
-                <li>
-                  <h4 class="mb-2">
-                    REST APIs RESTful na AWS com Spring Boot 3, Java e Docker
-                  </h4>
-                  <span class="time">Udemy</span><br />
-                  <span class="time">Janeiro 2024</span>
-                  <p class="my-2">
-                    Curso de REST APIs RESTful utilizando Spring Boot 3, Java
-                    e Docker na AWS, durante o curso aprendi a criar,
-                    desenvolver e implementar APIs escaláveis e seguras
-                  </p>
-                </li>
-              </ul>
+          <a href="https://perfection.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio2.jpg" alt="PERFECTION Holdings" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
             </div>
-          </div>
-          <div class="row mt-5">
-            <div class="col-lg-6">
-              <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                <div class="skill-progress flex-grow-1">
-                  <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                    <span>Spring Boot</span>
-                    <span class="text-right progress-percent">75%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-percent="75" aria-valuenow="75" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">PERFECTION Holdings</div>
             </div>
-            <div class="col-lg-6">
-              <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                <div class="skill-progress flex-grow-1">
-                  <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                    <span>Laravel</span>
-                    <span class="text-right progress-percent">45%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-percent="45" aria-valuenow="45" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
+          </a>
+
+          <a href="https://mmzauditores.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio3.jpg" alt="MMZ Auditores" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
             </div>
-            <div class="col-lg-6">
-              <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                <div class="skill-progress flex-grow-1">
-                  <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                    <span>Flutter </span>
-                    <span class="text-right progress-percent">55%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-percent="55" aria-valuenow="55" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">MMZ Auditores</div>
             </div>
-            <div class="col-lg-6">
-              <div class="skill d-flex flex-row pr-4 pr-sm-3 px-3 mb-4">
-                <div class="skill-progress flex-grow-1">
-                  <div class="progresss-info d-flex flex-row justify-content-between mt-2 mb-1">
-                    <span>Vue.js</span>
-                    <span class="text-right progress-percent">63%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-percent="63" aria-valuenow="63" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
+          </a>
+
+          <a href="https://diamondseguros.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio4.jpg" alt="Diamond Seguros" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
             </div>
-          </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Diamond — Companhia de Seguros, S.A</div>
+            </div>
+          </a>
+
+          <a href="https://indicoseguros.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio5.jpg" alt="Índico Seguros" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Índico Seguros, S.A</div>
+            </div>
+          </a>
+
+          <a href="https://eb.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio6.jpg" alt="Every Business" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Every Business</div>
+            </div>
+          </a>
+
+          <a href="https://perfect.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio9.jpg" alt="Perfect Panel beaters" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Perfect — Panel Beaters</div>
+            </div>
+          </a>
+
+          <a href="https://genesis.co.mz" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio10.jpg" alt="Genesis S.A" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Genesis, S.A</div>
+            </div>
+          </a>
+
+          <a href="assets/images/portfolio7.jpeg" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio7.jpeg" alt="EMOSE WhatsApp BOT" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver imagem ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">WhatsApp BOT</div>
+              <div class="proj-name">EMOSE S.A</div>
+            </div>
+          </a>
+
         </div>
+
+        <!-- Extra 7 projects (hidden by default) -->
+        <div class="proj-extra" id="projExtra">
+
+          <a href="assets/images/portfolio8.jpeg" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio8.jpeg" alt="Diamond WhatsApp BOT" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver imagem ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">WhatsApp BOT</div>
+              <div class="proj-name">Diamond — Companhia de Seguros, S.A</div>
+            </div>
+          </a>
+
+          <a href="https://a2sgrafics.co.mz" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio11.jpg" alt="A2S Grafics" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">A2S Grafics, LDA</div>
+            </div>
+          </a>
+
+          <a href="https://caidozubaida.com" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio12.jpg" alt="Caido Zubaida" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Caido Zubaida</div>
+            </div>
+          </a>
+
+          <a href="https://infopplysolutions.co.mz" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio13.jpg" alt="InfoPply Solutions" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">InfoPply Solutions</div>
+            </div>
+          </a>
+
+          <a href="https://jltech.co.mz/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio14.jpg" alt="JL Tech" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">JL Tech</div>
+            </div>
+          </a>
+
+          <a href="https://dolphincargoservice.com/" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio15.jpg" alt="Dolphin Cargo Service" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Dolphin Cargo Service</div>
+            </div>
+          </a>
+
+          <a href="https://bluteki.com" target="_blank" rel="noopener" class="proj-card" data-aos="fade-up">
+            <div class="proj-thumb">
+              <img src="assets/images/portfolio16.jpg" alt="Bluteki Novo Site" loading="lazy" />
+              <div class="proj-thumb-overlay"><span class="proj-visit">Ver projecto ↗</span></div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tag">Website</div>
+              <div class="proj-name">Bluteki LDA — Novo Site</div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="proj-more-wrap" data-aos="fade-up">
+          <button class="btn btn-outline" id="showMoreBtn">Ver todos os projectos →</button>
+        </div>
+
       </div>
     </section>
-    <!--RESUME SECTION START-->
 
-    <!--CONTACT SECTION START-->
-    <section class="contact" id="contact">
-      <div class="container d-flex flex-column justify-content-between h-100">
-        <div class="section-title flex-grow-1">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center">
-                <h2 data-aos="heading-show" class="text_background">
-                  Entre em contacto
-                  <span class="heading_background">Contacte-me</span>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section-content flex-grow-1">
-          <div class="row">
-            <div class="col-sm-4">
-              <div
-                class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                  <span class="mbri-letter"></span>
-                </div>
-                <div class="contact-details mt-2">
-                  <h5>Email</h5>
-                  <p>
-                    <a href="mailto:paulomaculuve758@gmail.com"><span
-                        class="__cf_email__">paulomaculuve758@gmail.com</span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div
-                class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                  <span class="mbri-mobile"></span>
-                </div>
-                <div class="contact-details mt-2">
-                  <h5>Chamadas</h5>
-                  <p><a href="tel:+258846568447">+258 84 656 8447</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div
-                class="d-flex flex-row flex-sm-column flex-md-row justify-content-md-center mb-3 text-left text-sm-center text-md-left">
-                <div class="contact-icon mr-md-3 mr-3 mr-sm-0">
-                  <span class="mbri-map-pin"></span>
-                </div>
-                <div class="contact-details mt-2">
-                  <h5>Endereço</h5>
-                  <p>Matola</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /CONTACT SECTION END-->
-    <footer class="horizontal-footer shadow-footer">
+    <!-- ===================================================================
+         SKILLS
+    ==================================================================== -->
+    <section class="skills" id="skills" aria-label="Competências">
       <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-12">
-            <div class="text-center">
-              <ul class="social-icons list-inline mt-4 mt-xl-0">
-                <li class="list-inline-item">
-                  <a href="https://wa.me/258846568447">
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://join.skype.com/invite/LHXMxWlgRAxi">
-                    <i class="fab fa-skype"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://linkedin.com/in/paulomaculuve">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://github.com/paulo-maculuve">
-                    <i class="fab fa-git"></i>
-                  </a>
-                </li>
-              </ul>
-              <p class="copyright-text mt-3 mb-5">
-                ©
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                . Todos os direitos reservados by
-                <b>Paulo Maculuve</b>
-              </p>
+
+        <div class="s-header" data-aos="fade-up">
+          <span class="s-num">03</span>
+          <h2 class="s-title">Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Skill chips by category -->
+          <div data-aos="fade-right">
+            <h3 class="skills-sub-title">Tecnologias</h3>
+
+            <div class="skill-cat">
+              <p class="skill-cat-lbl">Linguagens</p>
+              <div class="skill-chips">
+                <span class="chip">Java</span>
+                <span class="chip">PHP</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">Dart</span>
+                <span class="chip">Shell Script</span>
+                <span class="chip">SQL</span>
+                <span class="chip">HTML &amp; CSS</span>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <p class="skill-cat-lbl">Frameworks &amp; Bibliotecas</p>
+              <div class="skill-chips">
+                <span class="chip">Spring Boot</span>
+                <span class="chip">Laravel</span>
+                <span class="chip">Vue.js</span>
+                <span class="chip">Flutter</span>
+                <span class="chip">Bootstrap</span>
+                <span class="chip">REST APIs</span>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <p class="skill-cat-lbl">Bases de Dados</p>
+              <div class="skill-chips">
+                <span class="chip">MySQL</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">SQLite</span>
+              </div>
+            </div>
+
+            <div class="skill-cat">
+              <p class="skill-cat-lbl">Ferramentas &amp; DevOps</p>
+              <div class="skill-chips">
+                <span class="chip">Docker</span>
+                <span class="chip">Linux</span>
+                <span class="chip">Git</span>
+                <span class="chip">AWS</span>
+                <span class="chip">USSD</span>
+                <span class="chip">M-Pesa API</span>
+                <span class="chip">e-Mola API</span>
+                <span class="chip">WhatsApp Business</span>
+              </div>
             </div>
           </div>
+
+          <!-- Skill progress bars -->
+          <div data-aos="fade-left" data-aos-delay="100">
+            <h3 class="skills-sub-title">Proficiência</h3>
+
+            <div class="skill-bar" aria-label="Spring Boot 75%">
+              <div class="skill-bar-head">
+                <span class="skill-bar-name">Spring Boot</span>
+                <span class="skill-bar-pct">75%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-pct="75"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar" aria-label="JavaScript 80%">
+              <div class="skill-bar-head">
+                <span class="skill-bar-name">JavaScript</span>
+                <span class="skill-bar-pct">80%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-pct="80"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar" aria-label="Vue.js 63%">
+              <div class="skill-bar-head">
+                <span class="skill-bar-name">Vue.js</span>
+                <span class="skill-bar-pct">63%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-pct="63"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar" aria-label="Flutter 55%">
+              <div class="skill-bar-head">
+                <span class="skill-bar-name">Flutter</span>
+                <span class="skill-bar-pct">55%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-pct="55"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar" aria-label="PHP / Laravel 65%">
+              <div class="skill-bar-head">
+                <span class="skill-bar-name">PHP / Laravel</span>
+                <span class="skill-bar-pct">65%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-pct="65"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar" aria-label="Linux &amp; Shell Script 70%">
+              <div class="skill-bar-head">
+                <span class="skill-bar-name">Linux &amp; Shell Script</span>
+                <span class="skill-bar-pct">70%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-pct="70"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- ===================================================================
+         CONTACT
+    ==================================================================== -->
+    <section class="contact" id="contact" aria-label="Contacto">
+      <div class="container">
+
+        <div class="s-header" data-aos="fade-up">
+          <span class="s-num">04</span>
+          <h2 class="s-title">Contacto</h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div data-aos="fade-right">
+            <p class="contact-lede">
+              Tens um projecto em mente? Estou disponível para freelance, consultoria ou uma posição
+              a tempo inteiro. Envia-me uma mensagem directamente pelo WhatsApp.
+            </p>
+
+            <div class="contact-items">
+
+              <div class="c-item">
+                <div class="c-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="c-lbl">Email</div>
+                  <div class="c-val">
+                    <a href="mailto:paulomaculuve758@gmail.com">paulomaculuve758@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-item">
+                <div class="c-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="c-lbl">Chamadas &amp; WhatsApp</div>
+                  <div class="c-val">
+                    <a href="tel:+258846568447">+258 84 656 8447</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-item">
+                <div class="c-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="c-lbl">Localização</div>
+                  <div class="c-val">Matola, Moçambique</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="socials" aria-label="Redes sociais">
+              <a href="https://wa.me/258846568447" class="social-a" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/paulomaculuve" class="social-a" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="https://github.com/paulo-maculuve" class="social-a" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div data-aos="fade-left" data-aos-delay="100">
+            <div class="form-card">
+              <form id="contactForm" novalidate>
+
+                <div class="form-row">
+                  <label for="cName">Nome</label>
+                  <input
+                    type="text"
+                    id="cName"
+                    name="name"
+                    placeholder="O seu nome completo"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="cEmail">Email</label>
+                  <input
+                    type="email"
+                    id="cEmail"
+                    name="email"
+                    placeholder="o.seu@email.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="cMessage">Mensagem</label>
+                  <textarea
+                    id="cMessage"
+                    name="message"
+                    placeholder="Descreva o seu projecto ou pedido..."
+                    required
+                    rows="5"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent btn-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                  </svg>
+                  Enviar via WhatsApp
+                </button>
+
+                <p class="form-note" aria-live="polite">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  A mensagem será enviada directamente para o WhatsApp. Sem spam.
+                </p>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!--To Top Link START-->
-  <a href="#" class="toTop" id="return-to-top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
-  <!--To Top Link END-->
-
-  <!--Style switcher START-->
-  <div id="color-switcher" class="d-flex flex-row">
-    <div class="switcher-area">
-      <h3 class="mb-4 mt-2">Escolha a sua cor</h3>
-      <ul class="list-inline m-auto">
-        <li class="list-inline-item">
-          <a href="#" class="swtich-color color1 active" data-path="assets/css/default.css"></a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="swtich-color color2" data-path="assets/css/blue.css"></a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="swtich-color color3" data-path="assets/css/violet.css"></a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="swtich-color color4" data-path="assets/css/green.css"></a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="swtich-color color5" data-path="assets/css/pink.css"></a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="swtich-color color6" data-path="assets/css/red.css"></a>
-        </li>
-      </ul>
+  <!-- ===================================================================
+       FOOTER
+  ==================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © <span id="footerYear"></span> <strong>Paulo Maculuve</strong>. Todos os direitos reservados.
+        </p>
+        <div class="socials" aria-label="Redes sociais">
+          <a href="https://wa.me/258846568447" class="social-a" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/paulomaculuve" class="social-a" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://github.com/paulo-maculuve" class="social-a" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="switcher-button">
-      <i class="fas fa-cog"></i>
-    </div>
-  </div>
-  <!--Style switcher END-->
+  </footer>
 
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.easing.min.js"></script>
-  <script src="assets/js/jquery.appear.min.js"></script>
-  <script src="assets/js/jquery.countTo.js"></script>
-  <script src="assets/js/scrollspy.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/typed.min.js"></script>
-  <script src="assets/js/particles.min.js"></script>
-  <script src="assets/js/alert.js"></script>
-  <script src="assets/js/contact.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/switcher.js"></script>
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Inline: computed fields -->
   <script>
-    const birthYear = 2023;
-    const currentYear = new Date().getFullYear();
-    const age = currentYear - birthYear;
-
-    const ageCounter = document.getElementById("experience");
-    ageCounter.setAttribute("data-to", age);
+    const year = new Date().getFullYear();
+    document.getElementById('footerYear').textContent = year;
+    document.getElementById('ageText').textContent   = (year - 2002) + ' Anos';
+    document.getElementById('expText').textContent   = (year - 2022) + ' Anos';
   </script>
-</body>
 
+  <!-- Portfolio JS -->
+  <script src="assets/js/portfolio.js"></script>
+
+  <!-- AOS init (called after script is loaded) -->
+  <script>
+    AOS.init({ duration: 680, easing: 'ease-out-cubic', once: true, offset: 64 });
+  </script>
+
+</body>
 </html>
